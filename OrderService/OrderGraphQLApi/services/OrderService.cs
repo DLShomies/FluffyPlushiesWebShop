@@ -80,7 +80,7 @@ public class OrderService
                 line_items = input.line_items,
                 shipping_cost = (decimal)(input.shipping_cost ?? 0),
                 total_amount = (decimal)(input.total_amount ?? 0),
-                status = "Pending"
+                status = "editable"
             };
 
             await _orderCollection.InsertOneAsync(newOrder);
